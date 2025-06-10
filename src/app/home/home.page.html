@@ -1,0 +1,51 @@
+<ion-header class="no-shadow">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      <ion-icon name="home-outline" slot="start"></ion-icon>
+      Bienvenido
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+
+  <ion-grid class="ion-justify-content-center ion-align-items-center full-height-grid">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-md="6" size-lg="4">
+
+        <ion-card class="home-card compact-card"> <ion-card-header class="ion-text-center small-padding-header"> <img src="https://www.pikpng.com/pngl/b/415-4155513_png-file-svg-login-small-user-icon-clipart.png" alt="Bienvenida" class="card-image" />
+            <ion-card-title class="card-title">¡Bienvenido a la página principal!</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content class="small-padding-content"> <ion-button expand="block" color="danger" (click)="logout()" class="small-margin-bottom main-button"> <ion-icon slot="start" name="log-out-outline"></ion-icon>
+              Cerrar sesión
+            </ion-button>
+
+            <ion-button expand="block" color="primary" (click)="tomarFoto()" class="small-margin-bottom main-button"> <ion-icon slot="start" name="camera-outline"></ion-icon>
+              Tomar Foto
+            </ion-button>
+
+            <ion-button (click)="irAccesibilidad()" expand="block" color="primary" class="main-button"> Página de Accesibilidad
+            </ion-button>
+
+            <ion-img *ngIf="foto" [src]="foto" class="ion-margin-top image-preview"></ion-img>
+
+            <ion-chip color="success" *ngIf="isOnline" class="ion-margin-top connection-chip">
+              <ion-icon name="wifi-outline"></ion-icon>
+              <ion-label>¡Conectado a Internet!</ion-label>
+            </ion-chip>
+
+            <ion-chip color="danger" *ngIf="!isOnline" class="ion-margin-top connection-chip">
+              <ion-icon name="cloud-offline-outline"></ion-icon>
+              <ion-label>Sin conexión a Internet</ion-label>
+            </ion-chip>
+
+          </ion-card-content>
+
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,243 @@
+// src/app/pages/register/register.page.scss
+
+ion-content {
+  --background: var(--ion-background-color);
+}
+
+.full-height-grid {
+  height: 100%;
+}
+
+.login-card {
+  background: var(--ion-color-light);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center; // Mantenemos este
+  align-items: center;
+  overflow: hidden;
+
+  &.compact-card {
+    padding: 15px 20px;
+  }
+}
+
+.small-padding-header {
+  padding-bottom: 8px;
+}
+
+.small-padding-content {
+  padding-top: 8px;
+}
+
+.card-image {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 0px;
+  align-self: center; // Mantenemos este
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--ion-text-color);
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.card-subtitle {
+  font-size: 0.8rem;
+  color: var(--ion-color-medium);
+  margin-top: 2px;
+}
+
+.input-item {
+  --background: var(--ion-color-step-100);
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --inner-padding-end: 0;
+  border-radius: 12px;
+  min-height: 40px;
+  font-size: 0.9rem;
+
+  &.small-margin-bottom {
+    margin-bottom: 6px;
+  }
+  &.small-margin-top {
+    margin-top: 6px;
+  }
+
+  ion-icon {
+    font-size: 18px;
+    margin-right: 6px;
+  }
+
+  ion-input {
+    --placeholder-color: var(--ion-color-medium);
+    --color: var(--ion-text-color);
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+}
+
+.main-button {
+  height: 40px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: var(--ion-color-medium);
+  font-size: 0.75rem;
+
+  &.small-margin-vertical {
+    margin: 8px 0;
+  }
+
+  hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid var(--ion-color-step-200);
+  }
+
+  span {
+    margin: 0 8px;
+    font-weight: 500;
+  }
+}
+
+.social-buttons-row {
+  gap: 6px;
+}
+
+.social-button {
+  height: 40px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+
+  .social-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+}
+
+.google-button {
+  --background: var(--ion-color-light);
+  --color: var(--ion-text-color, #222);
+  --border-color: var(--ion-color-step-200);
+  --border-width: 1px;
+}
+
+.facebook-button {
+  --background: #4267B2;
+  --color: #fff;
+  --border-color: #4267B2;
+}
+
+.register-link-row {
+  color: var(--ion-color-medium);
+  text-align: center;
+  font-size: 0.8rem;
+  width: 100%;
+
+  &.small-margin-top {
+    margin-top: 8px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: var(--ion-color-primary);
+    font-weight: bold;
+    margin-left: 5px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.error-message {
+  color: var(--ion-color-danger);
+  margin-top: 8px;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.error-text-small { /* Para los mensajes de error de validación de formulario */
+  font-size: 0.75rem;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+
+// Responsive para móvil
+@media (max-width: 900px) {
+  .full-height-grid {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .login-card {
+    margin: 15px auto;
+    padding: 10px 15px;
+  }
+
+  .card-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .input-item {
+    min-height: 38px;
+  }
+
+  .main-button, .social-button {
+    height: 38px;
+    font-size: 0.85rem;
+  }
+
+  .divider {
+    font-size: 0.7rem;
+    margin: 8px 0;
+  }
+
+  .social-buttons-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .register-link-row {
+    font-size: 0.75rem;
+    margin-top: 6px;
+  }
+
+  .error-message {
+    font-size: 0.7rem;
+    margin-top: 6px;
+  }
+  .error-text-small {
+    font-size: 0.7rem;
+  }
+}

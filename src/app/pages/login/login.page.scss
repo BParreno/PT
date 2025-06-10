@@ -1,0 +1,209 @@
+// src/app/pages/login/login.page.scss
+
+ion-content {
+  --background: var(--ion-background-color);
+}
+
+.full-height-grid {
+  height: 100%;
+}
+
+.login-card {
+  background: var(--ion-color-light);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  max-width: 400px; /* Manteniendo el ancho que ajustamos antes */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+
+  &.compact-card { /* Nueva clase para los ajustes de altura */
+    padding: 20px 25px; /* Reducimos el padding de la tarjeta */
+  }
+}
+
+.small-padding-header {
+  padding-bottom: 10px; /* Reducimos el padding inferior del header de la tarjeta */
+}
+
+.small-padding-content {
+  padding-top: 10px; /* Reducimos el padding superior del content de la tarjeta */
+}
+
+
+.card-image {
+  width: 80px; /* Hacemos la imagen un poco más pequeña también para ahorrar espacio */
+  margin-bottom: 5px; /* Reducimos el margen inferior */
+  align-self: center;
+}
+
+.card-title {
+  font-size: 1.3rem; /* Ligeramente más pequeño */
+  font-weight: bold;
+  color: var(--ion-text-color);
+}
+
+.card-subtitle {
+  font-size: 0.85rem; /* Ligeramente más pequeño */
+  color: var(--ion-color-medium);
+}
+
+.input-item {
+  --background: var(--ion-color-step-100);
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --inner-padding-end: 0;
+  border-radius: 16px;
+  min-height: 44px; /* Ligeramente más pequeños los inputs */
+
+  &.small-margin-bottom {
+    margin-bottom: 8px; /* Margen inferior más pequeño */
+  }
+  &.small-margin-top {
+    margin-top: 8px; /* Margen superior más pequeño */
+  }
+
+
+  ion-icon {
+    font-size: 20px; /* Iconos ligeramente más pequeños */
+    margin-right: 8px;
+  }
+
+  ion-input {
+    --placeholder-color: var(--ion-color-medium);
+    --color: var(--ion-text-color);
+  }
+}
+
+.main-button {
+  height: 44px; /* Botones ligeramente más pequeños */
+  font-size: 1rem; /* Texto más pequeño */
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: var(--ion-color-medium);
+  font-size: 0.8rem; /* Texto más pequeño */
+
+  &.small-margin-vertical {
+    margin: 12px 0; /* Margen vertical más pequeño */
+  }
+
+  hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid var(--ion-color-step-200);
+  }
+
+  span {
+    margin: 0 10px; /* Espacio entre el texto y las líneas */
+    font-weight: 500;
+  }
+}
+
+.social-buttons-row {
+  gap: 8px; /* Reducimos el gap entre botones sociales */
+}
+
+.social-button {
+  height: 44px; /* Hacemos los botones sociales más pequeños */
+  font-weight: 500;
+  font-size: 0.9rem; /* Texto más pequeño */
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+
+  .social-icon {
+    width: 18px; /* Iconos más pequeños */
+    height: 18px;
+    margin-right: 6px;
+  }
+}
+
+.google-button {
+  --background: var(--ion-color-light);
+  --color: var(--ion-text-color, #222);
+  --border-color: var(--ion-color-step-200);
+  --border-width: 1px;
+}
+
+.facebook-button {
+  --background: #4267B2;
+  --color: #fff;
+  --border-color: #4267B2;
+}
+
+.register-link-row {
+  color: var(--ion-color-medium);
+  text-align: center;
+  font-size: 0.85rem; /* Texto más pequeño */
+  width: 100%;
+
+  &.small-margin-top {
+    margin-top: 10px; /* Margen superior más pequeño */
+  }
+
+  a {
+    color: var(--ion-color-primary);
+    font-weight: bold;
+    margin-left: 5px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.error-message {
+  color: var(--ion-color-danger);
+  margin-top: 10px;
+  text-align: center;
+}
+
+// Responsive para móvil
+@media (max-width: 900px) {
+  .full-height-grid {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .login-card {
+    margin: 20px auto; /* Reducimos el margen en móvil */
+    padding: 15px 20px; /* Reducimos aún más el padding en móvil */
+  }
+
+  .card-image {
+    width: 60px; /* Imagen más pequeña en móvil */
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .input-item {
+    min-height: 40px; /* Inputs aún más pequeños en móvil */
+  }
+
+  .main-button, .social-button {
+    height: 40px; /* Botones aún más pequeños en móvil */
+    font-size: 0.9rem;
+  }
+
+  .divider {
+    font-size: 0.75rem;
+    margin: 10px 0;
+  }
+
+  .social-buttons-row {
+    flex-direction: column; /* Apilamos los botones sociales en móvil */
+    gap: 8px;
+  }
+}

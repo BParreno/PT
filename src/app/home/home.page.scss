@@ -1,0 +1,115 @@
+// src/app/home/home.page.scss
+
+ion-content {
+  --background: var(--ion-background-color);
+}
+
+.full-height-grid {
+  height: 100%;
+}
+
+.home-card {
+  background: var(--ion-color-light);
+  border-radius: 20px; // Consistente con login-card
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  max-width: 400px; // Consistente con login-card
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  &.compact-card {
+    padding: 15px 20px; // Consistente con login-card
+  }
+}
+
+.small-padding-header {
+  padding-bottom: 8px; // Consistente con login-card
+}
+
+.small-padding-content {
+  padding-top: 8px; // Consistente con login-card
+}
+
+.card-image {
+  width: 70px; // Consistente con login-card
+  height: 70px; // Consistente con login-card
+  margin-bottom: 0px; // Consistente con login-card
+  align-self: center;
+}
+
+.card-title {
+  font-size: 1.2rem; // Consistente con login-card
+  font-weight: bold;
+  color: var(--ion-text-color);
+  margin-top: 5px; // Consistente con login-card
+  margin-bottom: 0px; // Consistente con login-card
+}
+
+.main-button {
+  height: 40px; // Consistente con login-card
+  font-size: 0.95rem; // Consistente con login-card
+  font-weight: 600;
+  border-radius: 8px;
+  margin-top: 10px; // Consistente con login-card
+  margin-bottom: 8px; // Consistente con login-card
+}
+
+.small-margin-bottom {
+  margin-bottom: 6px; // Usado para separar los botones
+}
+
+.image-preview {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 15px; // Un poco más de margen para la imagen
+}
+
+.connection-chip {
+  font-weight: 500;
+  padding: 6px 10px; // Reducimos padding
+  border-radius: 20px;
+  font-size: 0.8rem; // Reducimos fuente
+
+  ion-icon {
+    font-size: 1rem; // Reducimos tamaño de icono
+    margin-right: 5px;
+  }
+}
+
+// Responsive para móvil
+@media (max-width: 900px) {
+  .full-height-grid {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .home-card {
+    margin: 15px auto;
+    padding: 10px 15px;
+  }
+
+  .card-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .main-button {
+    height: 38px;
+    font-size: 0.85rem;
+  }
+
+  .connection-chip {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+    ion-icon {
+      font-size: 0.9rem;
+    }
+  }
+}
