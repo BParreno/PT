@@ -7,4 +7,15 @@ ion-input,
 ion-textarea {
   color: #000;
   background-color: #fff;
+  margin-block-start: 2%;
+}
+
+.ion-id, ion-label{
+  font-size: 140%;
+}
+
+ion-button {
+  margin-left: 45%; 
+  width: 10%;
+  padding-top: 10px;
 }
